@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="rpa_robin01Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EMPTOR_RBN_TICKET">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParrentId" Type="int" />
+    <Property Name="BackgroundImage" Type="nvarchar(max)" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="RBN_EMPTOR_API_USERS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmptorUsername" Type="nvarchar(max)" />
+    <Property Name="Fullname" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="RegisterDate" Type="datetime" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="RBN_EMPTOR_SIGNATURE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TicketId" Type="int" />
+    <Property Name="FormId" Type="int" />
+    <Property Name="RegisterDate" Type="datetime" />
+    <Property Name="Signature" Type="bit" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="rpa_robin01ModelStoreContainer">
+    <EntitySet Name="EMPTOR_RBN_TICKET" EntityType="Self.EMPTOR_RBN_TICKET" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RBN_EMPTOR_API_USERS" EntityType="Self.RBN_EMPTOR_API_USERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RBN_EMPTOR_SIGNATURE" EntityType="Self.RBN_EMPTOR_SIGNATURE" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

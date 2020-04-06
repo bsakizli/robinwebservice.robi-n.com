@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Emptor_ProbilServis_ProdModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CRMTBL_TICKET">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="212" FixedLength="false" Unicode="true" />
+    <Property Name="STARTDATE" Type="DateTime" Precision="3" />
+    <Property Name="ENDDATE" Type="DateTime" Precision="3" />
+    <Property Name="PLANNEDSTARTDATE" Type="DateTime" Precision="3" />
+    <Property Name="PLANNEDENDDATE" Type="DateTime" Precision="3" />
+    <Property Name="RESPONSIBLEPOSITIONID" Type="Int32" />
+    <Property Name="RESPONSIBLEUSERID" Type="Int32" />
+    <Property Name="TICKETTYPEID" Type="Int32" />
+    <Property Name="ISVISIBLETOCUSTOMER" Type="Boolean" />
+    <Property Name="CUSTOMERID" Type="Int32" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="TICKETSTATUSID" Type="Int32" />
+    <Property Name="TICKETPRIORITYID" Type="Int32" />
+    <Property Name="DURATION" Type="Double" />
+    <Property Name="NOTES" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KNOWLEDGEBASEID" Type="Int32" />
+    <Property Name="CONTACTCUSTOMERID" Type="Int32" />
+    <Property Name="CONTRACTID" Type="Int32" />
+    <Property Name="CONTRACTCONDITIONID" Type="Int32" />
+    <Property Name="PRODUCTID" Type="Int32" />
+    <Property Name="RELATEDTICKETID" Type="Int32" />
+    <Property Name="SOLUTION" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="OPENDATE" Type="DateTime" Precision="3" />
+    <Property Name="NOTIFICATIONDATE" Type="DateTime" Precision="3" />
+    <Property Name="CUSTOMERSATISFACTIONID" Type="Int32" />
+    <Property Name="CUSTOMERREMARKS" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="C_REFERANCENUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="C_FORMNUMBER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="C_TICKETSOURCEID" Type="Int32" />
+    <Property Name="C_INTERVENTIONDATE" Type="DateTime" Precision="3" />
+    <Property Name="C_SOLUTIONDATE" Type="DateTime" Precision="3" />
+    <Property Name="C_ISINTERVENTIONTIMEDELAY" Type="Boolean" />
+    <Property Name="C_ISSOLUTIONTIMEDELAY" Type="Boolean" />
+    <Property Name="C_ANNOUNCERACCOUNTID" Type="Int32" />
+    <Property Name="C_ANNOUNCERCONTACTID" Type="Int32" />
+    <Property Name="C_CONCERNEDACCOUNTID" Type="Int32" />
+    <Property Name="C_CONCERNEDCONTACTID" Type="Int32" />
+    <Property Name="C_CONTRACTID" Type="Int32" />
+    <Property Name="C_MAXINTERVENTIONTIME" Type="Int32" />
+    <Property Name="C_MAXSOLUTIONTIME" Type="Int32" />
+    <Property Name="C_ISWAIT" Type="Boolean" />
+    <Property Name="C_MAXINTERVENTIONDATE" Type="DateTime" Precision="3" />
+    <Property Name="C_MAXSOLUTIONDATE" Type="DateTime" Precision="3" />
+    <Property Name="C_BACKCALLDATE" Type="DateTime" Precision="3" />
+    <Property Name="C_ISUNDERGUARANTEE" Type="Boolean" />
+    <Property Name="C_ISCONTRACT" Type="Boolean" />
+    <Property Name="C_ISPAIDFORPART" Type="Boolean" />
+    <Property Name="C_ISPAIDFORTICKET" Type="Boolean" />
+    <Property Name="C_ISFREE" Type="Boolean" />
+    <Property Name="C_PROJECTID" Type="Int32" />
+    <Property Name="C_PROJECTITEMID" Type="Int32" />
+    <Property Name="C_TICKETSTATUSSUBID" Type="Int32" />
+    <Property Name="CREATE_USER_ID" Type="Int32" />
+    <Property Name="CREATE_USER_POSITION_ID" Type="Int32" />
+    <Property Name="CREATE_USER_TIME" Type="DateTime" Precision="3" />
+    <Property Name="UPDATE_USER_ID" Type="Int32" />
+    <Property Name="UPDATE_USER_POSITION_ID" Type="Int32" />
+    <Property Name="UPDATE_USER_TIME" Type="DateTime" Precision="3" />
+    <Property Name="ACTIVE" Type="Boolean" />
+    <Property Name="C_ORGANISATIONID" Type="Int32" />
+    <Property Name="C_WAITINGREASONID" Type="Int32" />
+    <Property Name="C_INVENTORYID" Type="Int32" />
+    <Property Name="ROWSTAMP" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CUSTOMERPRIORITYID" Type="Int32" />
+    <Property Name="C_INTERVENTIONTIME" Type="Int32" />
+    <Property Name="C_SOLUTIONTIME" Type="Int32" />
+    <Property Name="CONCERNEDCONTACT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PROJECTID" Type="Int32" />
+    <Property Name="HAS_MAIN_RESPONSIBLE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="SIEBELNUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ISFROMPERIODICALSERVICE" Type="Int32" />
+    <Property Name="C_TICKETSUBAREAID" Type="Int32" />
+    <Property Name="C_TICKETAREAID" Type="Int32" />
+    <Property Name="C_INVOICEFIRM" Type="Int32" />
+    <Property Name="C_INVOICENUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IDDESC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="C_BILLAMOUNT" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="C_BILLAMOUNT_CURID" Type="Int32" />
+    <Property Name="ACCESSORY" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="C_TICKETSTANDARTLEVELID" Type="Int32" />
+    <Property Name="C_PLANNEDDAY" Type="Int32" />
+    <Property Name="C_PLANNEDHOUR" Type="Int32" />
+    <Property Name="TICKETDISTANCEID" Type="Int32" />
+    <Property Name="ISWITHVEHICLE" Type="Boolean" />
+    <Property Name="ISDONTDOPIDCHECK" Type="Boolean" />
+    <Property Name="SOLUTIONEXPLANATION" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="DOAASSET" Type="Boolean" />
+    <Property Name="GUIDEDTOTHIRDPARTY" Type="Boolean" />
+    <Property Name="SUBRESPONSIBILITY_COMASEPERATED" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="C_CONCERNEDCONTACTIDWITHEMPREGNO" Type="Int32" />
+    <Property Name="C_TICKETSTATUSSUBID_BENCH" Type="Int32" />
+    <Property Name="C_TICKETSTATUSSUBID_LOGISTICS" Type="Int32" />
+    <Property Name="C_TICKETSTATUSSUBID_PROPOSAL" Type="Int32" />
+    <Property Name="C_TICKETSTATUSSUBID_LEVELONE" Type="Int32" />
+    <Property Name="TICKETLASTACTIVITYDATE" Type="DateTime" Precision="3" />
+    <Property Name="APPOINTMENTDATE" Type="DateTime" Precision="3" />
+    <Property Name="C_TICKETSTATUSSUBID_INSTALLATION" Type="Int32" />
+    <Property Name="C_MAXINTERVENTIONDATEFROMCONDITION" Type="DateTime" Precision="3" />
+    <Property Name="C_MAXSOLUTIONDATEFROMCONDITION" Type="DateTime" Precision="3" />
+    <Property Name="C_INTERVENTIONTIMEDELAY" Type="Int32" />
+    <Property Name="C_SOLUTIONTIMEDELAY" Type="Int32" />
+    <Property Name="HASRESOLVED" Type="Boolean" />
+    <Property Name="BDH_EXTERNALID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TICKETTTNETADDITIONALFIELDID" Type="Int32" />
+    <Property Name="IDCOPYFORBDHFUNCTIONTABLE" Type="Int32" />
+    <Property Name="UNCLOSEREASONID" Type="Int32" />
+    <Property Name="UNCLOSEDETAILS" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="SUGGESTEDACTION" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="PROCESSTYPEID" Type="Int32" />
+    <Property Name="TICKETQUALITYCODE_COMASEPERATED" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="ISCABLEDBETWEENSUNKANDROUTER" Type="Boolean" />
+    <Property Name="SUNKCABLELENGTH" Type="Double" />
+    <Property Name="TOTALCABLELENGTHBETWEENSUNKANDROUTER" Type="Double" />
+    <Property Name="ELECTRICCABLELENGTH" Type="Double" />
+    <Property Name="COSTLESSREASON" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="C_TICKETSTATUSSUBID_CUSTOMER" Type="Int32" />
+    <Property Name="C_TICKETSTATUSSUBID_CUSTOMERDATE" Type="DateTime" Precision="3" />
+    <Property Name="SURVEYINFONOTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NOSURVEYREASONID" Type="Int32" />
+    <Property Name="PROBLEMRECORDID" Type="Int32" />
+    <Property Name="PROBLEMID" Type="Int32" />
+    <Property Name="TICKETCOSTID" Type="Int32" />
+    <Property Name="MITOLDID" Type="Int32" />
+    <Property Name="ISCLOSED" Type="Boolean" />
+    <Property Name="INTELTEKCIHAZTIPIID" Type="Int32" />
+    <Property Name="INTELTEKTERMINALNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="C_CUSTOMERSTATUSTEXT" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CANCELEXPEND" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CANCELEXP" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="HASSERVICEFORMREACHEDPHYSICALLY" Type="Boolean" />
+    <Property Name="CONTRACTGROUPGUIDEID" Type="Int32" />
+    <Property Name="SERVICEVALUE" Type="Int32" />
+    <Property Name="ProblemImpactID" Type="Int32" />
+    <Property Name="ProblemProbabilityID" Type="Int32" />
+    <Property Name="HasInventoryChange" Type="Boolean" />
+    <Property Name="FORMCONTROLLERID" Type="Int32" />
+    <Property Name="FORMCONTROLDATE" Type="DateTime" Precision="3" />
+    <Property Name="FORMCONTROLNOTES" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="FORMCONTROLWAITINGACTION" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PLANNEDDATE_CUSTOMER" Type="DateTime" Precision="3" />
+    <Property Name="PLANNEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DEPARTURESTARTTIME" Type="DateTime" Precision="3" />
+    <Property Name="TICKETLOCATIONADDRESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TICKETLOCATIONCITYID" Type="Int32" />
+    <Property Name="TICKETLOCATIONDISTRICTID" Type="Int32" />
+    <Property Name="TICKETLOCATIONCOUNTRYID" Type="Int32" />
+    <Property Name="FAULTRECORDDATE" Type="DateTime" Precision="0" />
+    <Property Name="FAULTRECORDNUMBER" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="FAULTRECORDEXPLANATION" Type="String" MaxLength="1500" FixedLength="true" Unicode="true" />
+    <Property Name="CIRCUITNUMBER" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="ISLOCKED" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="OPTSERVICEWORKTYPE" Type="Int32" />
+    <Property Name="OPTSERVICESUBJECT" Type="Int32" />
+    <Property Name="ISMAJORINCIDENT" Type="Boolean" />
+    <Property Name="MAJORINCIDENTANALYSIS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SERVICEBUSINESSTYPE" Type="Int32" />
+    <Property Name="SERVICEBUSINESSSUBTYPE" Type="Int32" />
+    <Property Name="SERVICESOLUTIONTYPE" Type="Int32" />
+    <Property Name="SERVICESOLUTIONTYPESUB" Type="Int32" />
+    <Property Name="C_TICKETIMPORTANCEID" Type="Int32" />
+    <Property Name="C_TICKETIMPACTID" Type="Int32" />
+    <Property Name="C_SOLUTIONIMPORTANCEID" Type="Int32" />
+    <Property Name="C_PYPPROJECTID" Type="Int32" />
+    <Property Name="C_PYPID" Type="Int32" />
+    <Property Name="TICKET_SERIALNUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ROOTCAUSEANALYSIS" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="PROBLEMTICKETRELATIONS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="RULOREQUESTCOUNT" Type="Int32" />
+    <Property Name="RULOUSEDCOUNT" Type="Int32" />
+    <Property Name="POSADDRESID" Type="Int32" />
+    <Property Name="POSPHONEID" Type="Int32" />
+    <Property Name="TICKETLEVELCOSTTYPEID" Type="Int32" />
+    <Property Name="ISPOLLAPPROVE" Type="Boolean" />
+    <NavigationProperty Name="CRMTBL_TICKET1" Relationship="Self.FK_CRMTBL_TICKET_RELATEDTICKETID" FromRole="CRMTBL_TICKET" ToRole="CRMTBL_TICKET1" />
+    <NavigationProperty Name="CRMTBL_TICKET2" Relationship="Self.FK_CRMTBL_TICKET_RELATEDTICKETID" FromRole="CRMTBL_TICKET1" ToRole="CRMTBL_TICKET" />
+  </EntityType>
+  <Association Name="FK_CRMTBL_TICKET_RELATEDTICKETID">
+    <End Role="CRMTBL_TICKET" Type="Self.CRMTBL_TICKET" Multiplicity="0..1" />
+    <End Role="CRMTBL_TICKET1" Type="Self.CRMTBL_TICKET" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRMTBL_TICKET">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CRMTBL_TICKET1">
+        <PropertyRef Name="RELATEDTICKETID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Emptor_ProbilServis_ProdEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CRMTBL_TICKET" EntityType="Self.CRMTBL_TICKET" />
+    <AssociationSet Name="FK_CRMTBL_TICKET_RELATEDTICKETID" Association="Self.FK_CRMTBL_TICKET_RELATEDTICKETID">
+      <End Role="CRMTBL_TICKET" EntitySet="CRMTBL_TICKET" />
+      <End Role="CRMTBL_TICKET1" EntitySet="CRMTBL_TICKET" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

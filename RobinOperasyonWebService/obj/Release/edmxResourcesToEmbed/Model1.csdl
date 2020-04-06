@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="rpa_robin01Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="EMPTOR_RBN_TICKET">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParrentId" Type="Int32" />
+    <Property Name="BackgroundImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="rpa_robin01Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="EMPTOR_RBN_TICKET" EntityType="Self.EMPTOR_RBN_TICKET" />
+    <EntitySet Name="RBN_EMPTOR_API_USERS" EntityType="rpa_robin01Model.RBN_EMPTOR_API_USERS" />
+    <EntitySet Name="RBN_EMPTOR_SIGNATURE" EntityType="rpa_robin01Model.RBN_EMPTOR_SIGNATURE" />
+    <EntitySet Name="RBN_EMPTOR_AUTOTICKETCLOSEDScheduler" EntityType="rpa_robin01Model.RBN_EMPTOR_AUTOTICKETCLOSEDScheduler" />
+    <EntitySet Name="RBN_EMPTOR_AUTOCLOSEDTICKET" EntityType="rpa_robin01Model.RBN_EMPTOR_AUTOCLOSEDTICKET" />
+  </EntityContainer>
+  <EntityType Name="RBN_EMPTOR_API_USERS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmptorUsername" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fullname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RegisterDate" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="RBN_EMPTOR_SIGNATURE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketId" Type="Int32" />
+    <Property Name="RegisterDate" Type="DateTime" Precision="3" />
+    <Property Name="Signature" Type="Boolean" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="FormId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="RBN_EMPTOR_AUTOTICKETCLOSEDScheduler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RepeatSchedulerSeconds" Type="Int32" />
+    <Property Name="SqlCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RegisterDate" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="LastStartDate" Type="DateTime" Precision="3" />
+    <Property Name="Process" Type="Int32" />
+    <Property Name="OneClosedTicketCount" Type="Int32" />
+  </EntityType>
+  <EntityType Name="RBN_EMPTOR_AUTOCLOSEDTICKET">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AutoClosedId" Type="Int32" />
+    <Property Name="TicketId" Type="Int32" />
+    <Property Name="ClosedDate" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Boolean" />
+  </EntityType>
+</Schema>

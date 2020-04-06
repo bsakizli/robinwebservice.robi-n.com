@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="rpa_robin01ModelStoreContainer" CdmEntityContainer="rpa_robin01Entities">
+    <EntitySetMapping Name="EMPTOR_RBN_TICKET">
+      <EntityTypeMapping TypeName="rpa_robin01Model.EMPTOR_RBN_TICKET">
+        <MappingFragment StoreEntitySet="EMPTOR_RBN_TICKET">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ParrentId" ColumnName="ParrentId" />
+          <ScalarProperty Name="BackgroundImage" ColumnName="BackgroundImage" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RBN_EMPTOR_API_USERS">
+      <EntityTypeMapping TypeName="rpa_robin01Model.RBN_EMPTOR_API_USERS">
+        <MappingFragment StoreEntitySet="RBN_EMPTOR_API_USERS">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="EmptorUsername" ColumnName="EmptorUsername" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RBN_EMPTOR_SIGNATURE">
+      <EntityTypeMapping TypeName="rpa_robin01Model.RBN_EMPTOR_SIGNATURE">
+        <MappingFragment StoreEntitySet="RBN_EMPTOR_SIGNATURE">
+          <ScalarProperty Name="FormId" ColumnName="FormId" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="TicketId" ColumnName="TicketId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
